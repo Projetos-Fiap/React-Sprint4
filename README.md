@@ -7,8 +7,12 @@
 <li>Vitor Maia (RM99658)</li>
 
 ### Como executar
-<p>Após clonar o repositório em seu editor de texto preferido, abra o terminal e execute:</p>
-`npm install`
-<p>Seguido pelo comando:</p>
-`npm start`
+Após clonar o repositório em seu editor de texto preferido, abra o terminal e execute:
+```
+npm install
+```
+Seguido pelo comando:
+```
+npm start
+```
 
