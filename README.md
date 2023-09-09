@@ -8,7 +8,7 @@
 
 ### Como executar
 <p>Após clonar o repositório em seu editor de texto preferido, abra o terminal e execute:</p>
-<p>`npm install`</p>
+`npm install`
 <p>Seguido pelo comando:</p>
-<p>`npm start`</p>
+`npm start`
 
