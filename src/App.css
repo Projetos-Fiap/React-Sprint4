@@ -11,13 +11,14 @@
 .about,
 .contact,
 .page1,
-.page2 {
+.page2,
+.signup {
   display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  background-color: #dbdbdb;
+  background-color: #ffffff;
   color: #000000;
 }
 
@@ -32,6 +33,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  font-size: 2em;
+  margin-top: 500px;
 }
 
 @media screen and (max-width: 960px) {

@@ -12,6 +12,7 @@ import Contact from "./routes/Contact";
 import ErrorPage from "./routes/ErrorPage";
 import Page1 from "./routes/Page1";
 import Page2 from "./routes/Page2";
+import Signup from "./routes/Signup";
 
 // Importando CSS
 import "./App.css";
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "page2",
         element: <Page2 />,
+      },
+      {
+        path: "sign-up",
+        element: <Signup />,
       },
     ],
   },

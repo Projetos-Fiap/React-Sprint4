@@ -1,21 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-// Importando ícones
+
 import { FaRecycle } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-// Importando CSS
+
 import "./Navbar.css";
+import { Button } from "../Button/Button";
+
 
 function Navbar() {
   const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
+
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  window.addEventListener('resize', showButton);
+
+
   return (
     <>
-      <IconContext.Provider value={{ color: "#fff" }}>
         <nav className="navbar">
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
@@ -23,7 +41,7 @@ function Navbar() {
               ReciclaSP
             </Link>
             <div className="menu-icon" onClick={handleClick}>
-              {click ? <FaTimes /> : <FaBars />}
+              {click ? <FaTimes color="white" /> : <FaBars color="white" />}
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
@@ -84,11 +102,16 @@ function Navbar() {
                   Contato
                 </NavLink>
               </li>
+
+
               
             </ul>
+
+            <div class = "centered-button">        
+              {button && <Button buttonStyle='btn--outline'>LOGIN</Button>}
+            </div>        
           </div>
         </nav>
-      </IconContext.Provider>
     </>
   );
 }

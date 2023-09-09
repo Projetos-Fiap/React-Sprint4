@@ -57,6 +57,12 @@
   justify-content: flex-end;
 }
 
+.centered-button {
+  /* A classe que envolve o botão para centralizá-lo */
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+}
+
 /* Faixa com cor de destaque */
 .nav-item {
   height: 90px;
@@ -151,3 +157,4 @@
     cursor: pointer;
   }
 }
+
