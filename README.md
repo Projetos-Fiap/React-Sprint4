@@ -1,4 +1,20 @@
-# React-Sprint3
+# Sprint 3 - Criando um site em React
+## Front-End & Web Development with JavaScript
+
+### Requisitos
+
+#### Front-End
+<li>Utilização de CSS Grid Container e Grid Item - 30 pontos</li>
+<li>Utilização de HTML Semântica - 20 pontos</li>
+<li>Responsividade do projeto (Desktop - Tablet - Mobile) - 50 pontos</li>
+
+#### Web Development with JavaScript
+<li>Build do Projeto - 10 pontos</li>
+<li>Componentização dos elementos envolvidos na semântica do projeto (props, props.children, fragments, JSX, imports) - 20 pontos</li>
+<li>SessionStorage, LocalStorage - 20 pontos</li>
+<li>Hooks (useState, useEffect, useForm) - 20 pontos</li>
+<li>routerDOM, Links - 15 pontos</li>
+<li>styled-components - 15 pontos</li>
 
 ### Grupo  
 <li>André Lambert (RM99148)</li>  
@@ -14,5 +30,4 @@ npm install
 Seguido pelo comando:
 ```
 npm start
-```
-
+``` 

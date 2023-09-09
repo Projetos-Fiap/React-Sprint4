@@ -5,8 +5,8 @@
 }
 
 .navbar {
-  background: #1a3925;
-  height: 80px;
+  background: #263243;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 0px;
 }
 
 .container {
@@ -32,8 +32,9 @@
   padding-left: 50px;
 }
 
+/* Nome do site/projeto */
 .navbar-logo {
-  color: #fff;
+  color: #17cf97;
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
@@ -44,6 +45,7 @@
 
 .navbar-icon {
   margin-right: 0.5rem;
+  color:#17cf97
 }
 
 .nav-menu {
@@ -55,15 +57,16 @@
   justify-content: flex-end;
 }
 
+/* Faixa com cor de destaque */
 .nav-item {
-  height: 80px;
+  height: 90px;
   border-bottom: 2px solid transparent;
 }
-
+/* Faixa com cor de destaque */
 .nav-item:hover {
-  border-bottom: 2px solid #d8ff7c;
+  border-bottom: 2px solid #17cf97;
 }
-
+/* Links */
 .nav-links {
   color: #ffffff;
   display: flex;
@@ -73,8 +76,9 @@
   height: 100%;
 }
 
+/* Link ativo */
 .activated {
-  color: #d8ff7c;
+  color: #17cf97;
 }
 
 .fa-bars {
@@ -102,9 +106,9 @@
   }
 
   .nav-menu.active {
-    background: #3c3c3d;
+    background: #263243;
     left: 0;
-    opacity: 1;
+    opacity: 0.8;
     transition: all 0.6s ease;
     z-index: 1;
   }
@@ -117,7 +121,7 @@
   }
 
   .nav-links:hover {
-    color: #d8ff7c;
+    color: #17cf97;
     transform: scale(1.2);
     transition: all 0.3s ease;
   }
