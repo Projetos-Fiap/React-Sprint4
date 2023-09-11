@@ -1,12 +1,19 @@
 import React from "react";
-import { AiOutlineMail } from "react-icons/ai";
+import { Button } from '../components/Button/Button'; 
 
 function Contact() {
   return (
-    <div className="contact">
-      <h1>Contato</h1>
-      <AiOutlineMail className="page-icon" />
-    </div>
+    <div className="contact">    
+      <form>
+          <h2>Entre em contato</h2>
+          <p>Dúvidas, críticas ou sugestões? Escreva para nós!</p>
+          <br />
+          <input type="text" name="name" id="" placeholder="Nome" />
+          <input type="email" name="email" id="" placeholder="Email" />
+          <textarea name="message" id="" cols="30" rows="10" placeholder="Escreva aqui"/>
+          <Button buttonStyle='btn--primary' >Enviar</Button>
+      </form>
+    </div>  
   );
 }
 

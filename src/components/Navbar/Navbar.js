@@ -105,7 +105,7 @@ function Navbar() {
 
               <li className="nav-item">
                 <NavLink
-                  to="/sign-up"
+                  to="/signup"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }

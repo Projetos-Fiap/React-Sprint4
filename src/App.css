@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
+/* CSS global */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,20 +8,51 @@
   font-family: "Open Sans", sans-serif;
 }
 
+/* CSS geral das páginas */
 .home,
 .about,
-.contact,
 .page1,
 .page2,
+.contact,
 .signup {
   display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 2rem;
   background-color: #ffffff;
   color: #000000;
 }
+
+/* CSS para o formulário de contato */
+.contact form {
+  display: block;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 4px 3px #ddd;
+  margin: 10px auto;
+  max-width: 800px;
+  padding: 80px;
+  text-align: center;
+}
+
+.contact form input, textarea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px auto;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+}
+
+.contact Button {
+  width: 150px;
+  padding: 10px;
+  margin: 30px auto;
+  font-size: 20px;
+}
+
+
 
 .page-icon {
   margin-left: 1rem;
@@ -40,8 +72,11 @@
 @media screen and (max-width: 960px) {
   .home,
   .about,
-  .contact {
-    font-size: 2.5rem;
+  .page1,
+  .page2,
+  .contact,
+  .signup {
+    font-size: 1.3rem;
   }
 
   .page-icon {
