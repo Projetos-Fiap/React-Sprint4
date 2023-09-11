@@ -103,13 +103,21 @@ function Navbar() {
                 </NavLink>
               </li>
 
+              <li className="nav-item">
+                <NavLink
+                  to="/sign-up"
+                  className={({ isActive }) =>
+                    "nav-links" + (isActive ? " activated" : "")
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Login
+                </NavLink>
+              </li>
 
               
             </ul>
-
-            <div class = "centered-button">        
-              {button && <Button buttonStyle='btn--outline'>LOGIN</Button>}
-            </div>        
+      
           </div>
         </nav>
     </>

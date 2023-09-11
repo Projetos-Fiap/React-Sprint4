@@ -17,10 +17,10 @@
 <li>styled-components - 15 pontos</li>
 
 ### Grupo  
-<li>André Lambert (RM99148)</li>  
-<li>Bryan Willian (RM551305)</li>
-<li>Lucas Feijó (RM99727)</li>
-<li>Vitor Maia (RM99658)</li>
+<li>André Lambert (RM99148) - 1ESPW</li>  
+<li>Bryan Willian (RM551305) - 1ESPW</li>
+<li>Lucas Feijó (RM99727) - 1ESPW</li>
+<li>Vitor Maia (RM99658) - 1ESPW</li>
 
 ### Como executar
 Após clonar o repositório em seu editor de texto preferido, abra o terminal e execute:
