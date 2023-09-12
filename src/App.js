@@ -1,37 +1,37 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, } from 'react-router-dom'; 
-import { createHashHistory } from 'history';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-// Importing Components
+// Importando componentes, Header e Footer
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
-// Importing Pages
+// Importando Páginas (Routes)
 import Home from "./routes/Home";
 import About from "./routes/About";
 import Contact from "./routes/Contact";
 import Page1 from "./routes/Page1";
 import Page2 from "./routes/Page2";
 import Signup from "./routes/Signup";
+import ErrorPage from "./routes/ErrorPage"
 
-import "./App.css"; // Import CSS
+// Importando CSS
+import "./App.css"; // 
 
-const hashHistory = createHashHistory();
-
-function App() {
+const App = () => {
   return (
-    <BrowserRouter history={hashHistory}> 
+    <Router>
       <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/page1" component={Page1} />
-        <Route path="/page2" component={Page2} />
-        <Route path="/signup" component={Signup} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/page1" element={<Page1 />} />
+        <Route path="/page2" element={<Page2 />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 }
 
