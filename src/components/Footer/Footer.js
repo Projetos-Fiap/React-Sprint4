@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
 import { Button } from '../Button/Button';
 import { Link } from 'react-router-dom';
@@ -10,6 +10,26 @@ import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
 import { FaRecycle } from "react-icons/fa";
 
 function Footer() {
+  const [email, setEmail] = useState('');
+  const [subscriptionMessage, setSubscriptionMessage] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubscription = () => {
+    if (!email) {
+      setSubscriptionMessage('Por favor, insira seu email.');
+    } else {
+      // Perform subscription logic here (e.g., API request)
+      // On success, set the success message and reset the email field
+      setSubscriptionMessage('Obrigado por inscrever-se!');
+      setIsSubscribed(true);
+      setEmail('');
+    }
+  };
+
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
@@ -20,19 +40,20 @@ function Footer() {
           Você pode cancelar a qualquer momento.
         </p>
         <div className='input-areas'>
-          <form>
-            <input
-              className='footer-input'
-              name='email'
-              type='email'
-              placeholder='Seu Email'
-            />
-            <Button onClick={() => alert('Obrigado por inscrever-se!')}>
-              Cadastrar
-            </Button>
-    
-          </form>
-
+          <input
+            className='footer-input'
+            name='email'
+            type='email'
+            placeholder='Seu Email'
+            value={email}
+            onChange={handleEmailChange}
+          />
+          <Button onClick={handleSubscription}>Cadastrar</Button>
+          <div className='subscription-message'>
+            <p style={{ color: isSubscribed ? '#17cf97' : 'red' }}>
+              {subscriptionMessage}
+            </p>
+          </div>
         </div>
       </section>
       <div class='footer-links'>
