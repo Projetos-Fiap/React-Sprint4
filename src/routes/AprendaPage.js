@@ -1,7 +1,6 @@
 import React from "react";
 
-
-function Page2() {
+function AprendaPage() {
   return (
     <div className="page2">
       <h1>Aprenda mais sobre reciclagem</h1>
@@ -9,4 +8,4 @@ function Page2() {
   );
 }
 
-export default Page2;
+export default AprendaPage;

@@ -1,17 +1,14 @@
-import { useRouteError } from "react-router-dom";
-import "../App.css";
+import React from "react";
 
-export default function ErrorPage() {
-  const error = useRouteError();
-  console.error(error);
-
+function ErrorPage() {
   return (
-    <div id="error-page">
-      <h1>Oh não!</h1>
-      <p>Essa é uma página de erro.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
+    <div className="errorpage">
+      <div className="container">
+        <h2>Oh não!</h2>
+        <p>Não achamos o que você estava procurando.</p>
+      </div>  
     </div>
   );
 }
+
+export default ErrorPage;

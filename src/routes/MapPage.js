@@ -1,6 +1,6 @@
 import React from "react";
 
-function Page1() {
+function MapPage() {
   return (
     <div className="page1">
       <div className="container">
@@ -16,4 +16,4 @@ function Page1() {
   );
 }
 
-export default Page1;
+export default MapPage;

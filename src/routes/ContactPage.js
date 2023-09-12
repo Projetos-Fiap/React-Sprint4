@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from '../components/Button/Button'; 
 
-function Contact() {
+function ContactPage() {
   return (
     <div className="contact">    
       <form>
@@ -17,4 +17,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default ContactPage;

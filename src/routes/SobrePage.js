@@ -1,12 +1,12 @@
 import React from "react";
 
 
-function About() {
+function SobrePage() {
   return (
     <div className="about">
-      <h1>Sobre</h1>
+      <h2>Sobre</h2>
     </div>
   );
 }
 
-export default About;
+export default SobrePage;

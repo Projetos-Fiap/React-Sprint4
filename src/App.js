@@ -1,17 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 // Importando componentes, Header e Footer
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 // Importando Páginas (Routes)
-import Home from "./routes/Home";
-import About from "./routes/About";
-import Contact from "./routes/Contact";
-import Page1 from "./routes/Page1";
-import Page2 from "./routes/Page2";
-import Signup from "./routes/Signup";
+import HomePage from "./routes/HomePage";
+import SobrePage from "./routes/SobrePage";
+import ContactPage from "./routes/ContactPage";
+import MapPage from "./routes/MapPage";
+import AprendaPage from "./routes/AprendaPage";
+import LoginPage from "./routes/LoginPage";
 import ErrorPage from "./routes/ErrorPage"
 
 // Importando CSS
@@ -19,20 +19,20 @@ import "./App.css"; //
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/page1" element={<Page1 />} />
-        <Route path="/page2" element={<Page2 />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-      <Footer />
-    </Router>
-  );
+    <>
+    <Navbar />
+    <Routes>
+      <Route path="*" element={<ErrorPage />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/sobre-nos" element={<SobrePage />} />
+      <Route path="/contato" element={<ContactPage />} />
+      <Route path="/mapa-dos-ecopontos" element={<MapPage />} />
+      <Route path="/aprenda-mais" element={<AprendaPage />} />
+      <Route path="/login" element={<LoginPage />} />
+    </Routes>
+    <Footer />
+    </>
+  )
 }
 
 export default App;

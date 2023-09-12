@@ -57,7 +57,7 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/about"
+                  to="/sobre-nos"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
@@ -69,7 +69,7 @@ function Navbar() {
 
               <li className="nav-item">
                 <NavLink
-                  to="/page1"
+                  to="/mapa-dos-ecopontos"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
@@ -81,7 +81,7 @@ function Navbar() {
 
               <li className="nav-item">
                 <NavLink
-                  to="/page2"
+                  to="/aprenda-mais"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
@@ -93,7 +93,7 @@ function Navbar() {
               
               <li className="nav-item">
                 <NavLink
-                  to="/contact"
+                  to="/contato"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
@@ -105,7 +105,7 @@ function Navbar() {
 
               <li className="nav-item">
                 <NavLink
-                  to="/signup"
+                  to="/login"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
