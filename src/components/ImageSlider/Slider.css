@@ -1,6 +1,6 @@
 .slider {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     position: relative;
     overflow: hidden;
 }
@@ -19,7 +19,7 @@
 @media screen and (min-width: 960px) {
     .slide img {
       width: 100%;
-      height: 100%;
+      height: 100%; 
     }
 }
   
@@ -35,15 +35,14 @@
   
 .content {
     position: absolute;
-    top: 23rem;
-    left: 5rem;
+    top: 90%;
+    left: 5%;
     opacity: 0;
-    width: 50%;
-    color: #fff;
+    max-width: fit-content;
     padding: 3rem;
-    background: rgba(0, 0, 0, 0.3);
+    background: #2632438a;
     animation: slide-up 1s ease 0.5s;
-    animation-delay: 0.5s;
+    animation-delay: 0.2s;
     animation-fill-mode: forwards;
     visibility: hidden;
 }
