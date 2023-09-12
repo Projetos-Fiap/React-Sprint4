@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Footer.css';
 import { Button } from '../Button/Button';
 import { Link } from 'react-router-dom';
@@ -10,12 +10,6 @@ import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
 import { FaRecycle } from "react-icons/fa";
 
 function Footer() {
-  const [showMessage, setShowMessage] = useState(false);
-
-  function handleSubscribeClick() {
-    setShowMessage(true);
-  }
-
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
@@ -33,14 +27,10 @@ function Footer() {
               type='email'
               placeholder='Seu Email'
             />
-            <Button onClick={handleSubscribeClick}>
+            <Button onClick={() => alert('Obrigado por inscrever-se!')}>
               Cadastrar
             </Button>
-            {showMessage && (
-            <p className='subscribe-success-message'>
-              Obrigado por se inscrever na nossa newsletter!
-            </p>
-          )}
+    
           </form>
 
         </div>
