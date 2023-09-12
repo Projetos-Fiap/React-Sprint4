@@ -81,6 +81,18 @@ function Navbar() {
 
               <li className="nav-item">
                 <NavLink
+                  to="/beneficios"
+                  className={({ isActive }) =>
+                    "nav-links" + (isActive ? " activated" : "")
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Benefícios
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink
                   to="/sobre-nos"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")

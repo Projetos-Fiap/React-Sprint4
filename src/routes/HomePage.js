@@ -1,11 +1,13 @@
 import React from "react";
+import Slider from "../components/ImageSlider/Slider";
+
 
 function HomePage() {
   return (
     <div className="homepage">
-      <h2>Home</h2>
+      <Slider />
     </div>
+    
   );
 }
-
 export default HomePage;

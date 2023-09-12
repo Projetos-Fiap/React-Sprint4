@@ -7,10 +7,11 @@ import Footer from "./components/Footer/Footer";
 
 // Importando Páginas (Routes)
 import HomePage from "./routes/HomePage";
-import SobrePage from "./routes/SobrePage";
-import ContactPage from "./routes/ContactPage";
 import MapPage from "./routes/MapPage";
 import AprendaPage from "./routes/AprendaPage";
+import BeneficiosPage from "./routes/BeneficiosPage";
+import SobrePage from "./routes/SobrePage";
+import ContactPage from "./routes/ContactPage";
 import LoginPage from "./routes/LoginPage";
 import ErrorPage from "./routes/ErrorPage"
 
@@ -27,6 +28,7 @@ const App = () => {
       <Route path="/mapa-dos-ecopontos" element={<MapPage />} />
       <Route path="/aprenda-mais" element={<AprendaPage />} />
       <Route path="/sobre-nos" element={<SobrePage />} />
+      <Route path="/beneficios" element={<BeneficiosPage />} />
       <Route path="/contato" element={<ContactPage />} />
       <Route path="/login" element={<LoginPage />} />
     </Routes>

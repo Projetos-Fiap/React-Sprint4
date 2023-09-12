@@ -15,6 +15,7 @@
 .aprendapage,
 .contactpage,
 .loginpage,
+.beneficiospage,
 .errorpage {
   display: flex;
   height: 100vh;
