@@ -1,34 +1,39 @@
 import { useState, useEffect } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Button } from "../Button/Button"
+import { Link } from "react-router-dom";
 import "./Slider.css";
 
 // Importando  e definindo Slides 
-import HomeSlide1 from './images/HomeSlide1.jpg';
-import HomeSlide2 from './images/HomeSlide2.jpg';
-import HomeSlide3 from './images/HomeSlide3.jpg';
-import HomeSlide4 from './images/HomeSlide4.jpg';
+import Slide1 from './images/HomeSlide1.jpg';
+import Slide2 from './images/HomeSlide2.jpg';
+import Slide3 from './images/HomeSlide3.jpg';
+import Slide4 from './images/HomeSlide4.jpg';
 
 export const sliderData = [
     {
-      image: HomeSlide1,
-      heading: "Te ajudamos a cuidar de São Paulo",
-      desc: "Vamos ajudar a cidade reciclando nosso lixo? Aprenda mais com a gente",
+      image: Slide1,
+      title: "Te ajudamos a cuidar de São Paulo",
+      text: "Vamos ajudar a cidade reciclando nosso lixo? Aprenda mais com a gente",
+      path: "/aprenda-mais"
     },
     {
-      image: HomeSlide2,
-      heading: "Onde jogar meu lixo?",
-      desc: "Veja onde tem um ponto de reciclagem próximo a você",
+      image: Slide2,
+      title: "Onde jogar meu lixo?",
+      text: "Veja onde tem um ponto de reciclagem próximo a você",
+      path: "/mapa-dos-ecopontos"
     },
     {
-      image: HomeSlide3,
-      heading: "Ganhe pontos",
-      desc: "Sabia que você pode trocar seu lixo por benefícios?",
+      image: Slide3,
+      title: "Ganhe pontos",
+      text: "Sabia que você pode trocar seu lixo por benefícios?",
+      path: "/beneficios"
     },
     {
-      image: HomeSlide4,
-      heading: "Sobre nós",
-      desc: "Conheça mais sobre o projeto ReciclaSP",
+      image: Slide4,
+      title: "Sobre nós",
+      text: "Conheça mais sobre o projeto ReciclaSP",
+      path: "/sobre-nos"
     },
 
   ];
@@ -79,10 +84,12 @@ const Slider = () => {
               <div>
                 <img src={slide.image} alt="slide" className="image" />
                 <div className="content">
-                  <h2>{slide.heading}</h2>
-                  <p>{slide.desc}</p>
+                  <h2>{slide.title}</h2>
+                  <p>{slide.text}</p>
                   <hr />
-                  <Button $primary>Saiba mais</Button>
+                  <Link to={slide.path}>
+                    <Button $primary>Saiba mais</Button>
+                  </Link>  
                 </div>
               </div>
             )}
