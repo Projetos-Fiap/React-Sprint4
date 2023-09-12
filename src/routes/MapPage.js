@@ -12,6 +12,7 @@ const MapPageContainer = styled.div`
     height: 600px;
     border: none;
   }
+  
 `;
 
 const MapPageTitle = styled.h2`

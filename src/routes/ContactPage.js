@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Button } from '../components/Button/Button'; 
 import styled from "styled-components";
 
@@ -41,16 +41,80 @@ const FormTextarea = styled.textarea`
   font-size: 1rem;
 `;
 
+const AlertMessage = styled.div`
+  color: ${(props) => (props.success ? "#17cf97" : "red")};
+  margin-top: 10px;
+`;
+
 function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [alertMessage, setAlertMessage] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    // Clear the alert message when the user starts typing
+    setAlertMessage("");
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Perform validation here
+    if (!formData.email) {
+      setAlertMessage("Por favor, insira seu email.");
+    } else if (!formData.name) {
+      setAlertMessage("Por favor, insira seu nome.");
+    } else if (!formData.message) {
+      setAlertMessage("Por favor, insira uma mensagem.");
+    } else {
+      // Send the form data or perform further actions (e.g., API request)
+      setAlertMessage("Mensagem enviada com sucesso!");
+      // Reset form fields
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    }
+  };
+
   return (
     <div className="contactpage">    
-      <ContactPageForm>
+      <ContactPageForm onSubmit={handleSubmit}>
           <FormTitle>Entre em contato</FormTitle>
           <FormText>Dúvidas, críticas ou sugestões? Escreva para nós!</FormText>
-          <FormInput type="text" name="name" placeholder="Nome" />
-          <FormInput type="email" name="email" placeholder="Email" />
-          <FormTextarea name="message" cols="30" rows="10" placeholder="Escreva aqui"/>
-          <Button>Enviar</Button>
+          <FormInput
+            type="text"
+            name="name"
+            placeholder="Nome"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          <FormInput
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <FormTextarea
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="Escreva aqui"
+            value={formData.message}
+            onChange={handleChange}
+          />
+          <Button type="submit">Enviar</Button>
+          <AlertMessage success={alertMessage === "Mensagem enviada com sucesso!"}>
+            {alertMessage}
+          </AlertMessage>
       </ContactPageForm>
     </div>  
   );
