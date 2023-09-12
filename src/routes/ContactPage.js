@@ -3,7 +3,7 @@ import { Button } from '../components/Button/Button';
 
 function ContactPage() {
   return (
-    <div className="contact">    
+    <div className="contactpage">    
       <form>
           <h2>Entre em contato</h2>
           <p>Dúvidas, críticas ou sugestões? Escreva para nós!</p>

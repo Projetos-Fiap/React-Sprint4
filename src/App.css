@@ -9,11 +9,11 @@
 }
 
 /* CSS geral das páginas */
-.home,
-.about,
-.page1,
-.page2,
-.contact,
+.homepage,
+.sobrepage,
+.mappage,
+.aprendapage,
+.contactpage,
 .loginpage,
 .errorpage {
   display: flex;
@@ -31,7 +31,7 @@
 }
 
 /* Formulário de contato */
-.contact form {
+.contactpage form {
   display: block;
   background-color: #ffffff;
   box-shadow: 2px 2px 4px 3px #ddd;
@@ -41,8 +41,8 @@
   max-width: 900px;
 }
 
-.contact form input,
-.contact form textarea {
+.contactpage form input,
+.contactpage form textarea {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -52,7 +52,7 @@
   border: 1px solid #ddd;
 }
 
-.contact Button {
+.contactpage Button {
   width: 150px;
   padding: 10px;
   margin: 30px auto;
@@ -60,11 +60,11 @@
 }
 
 /* Mapa de ecopontos */
-.page1 .container {
+.mappage .container {
   text-align: center;
 }
 
-.page1 .title {
+.mappage .title {
   text-align: center; 
   margin-bottom: 40px; 
 }
@@ -76,12 +76,13 @@
 
 
 @media screen and (max-width: 960px) {
-  .home,
-  .about,
-  .page1,
-  .page2,
-  .contact,
-  .signup {
+  .homepage,
+  .sobrepage,
+  .mappage,
+  .aprendapage,
+  .contactpage,
+  .loginpage,
+  .errorpage {
     font-size: 1.3rem;
   }
 
