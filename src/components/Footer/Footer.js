@@ -33,15 +33,16 @@ function Footer() {
               type='email'
               placeholder='Seu Email'
             />
-            <Button buttonStyle='btn--outline' onClick={handleSubscribeClick}>
+            <Button onClick={handleSubscribeClick}>
               Cadastrar
             </Button>
-          </form>
-          {showMessage && (
+            {showMessage && (
             <p className='subscribe-success-message'>
               Obrigado por se inscrever na nossa newsletter!
             </p>
           )}
+          </form>
+
         </div>
       </section>
       <div class='footer-links'>

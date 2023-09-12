@@ -4,11 +4,8 @@ import { NavLink } from "react-router-dom";
 
 import { FaRecycle } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
 
 import "./Navbar.css";
-import { Button } from "../Button/Button";
-
 
 function Navbar() {
   const [click, setClick] = useState(false);

@@ -11,7 +11,7 @@ function ContactPage() {
           <input type="text" name="name" id="" placeholder="Nome" />
           <input type="email" name="email" id="" placeholder="Email" />
           <textarea name="message" id="" cols="30" rows="10" placeholder="Escreva aqui"/>
-          <Button buttonStyle='btn--primary' >Enviar</Button>
+          <Button>Enviar</Button>
       </form>
     </div>  
   );
