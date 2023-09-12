@@ -5,6 +5,8 @@ import { NavLink } from "react-router-dom";
 import { FaRecycle } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+import { Button } from '../Button/Button';
+
 import "./Navbar.css";
 
 function Navbar() {
@@ -52,17 +54,6 @@ function Navbar() {
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/sobre-nos"
-                  className={({ isActive }) =>
-                    "nav-links" + (isActive ? " activated" : "")
-                  }
-                  onClick={closeMobileMenu}
-                >
-                  Sobre
-                </NavLink>
-              </li>
 
               <li className="nav-item">
                 <NavLink
@@ -87,6 +78,19 @@ function Navbar() {
                   Aprenda mais
                 </NavLink>
               </li>
+
+              <li className="nav-item">
+                <NavLink
+                  to="/sobre-nos"
+                  className={({ isActive }) =>
+                    "nav-links" + (isActive ? " activated" : "")
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Sobre
+                </NavLink>
+              </li>
+
               
               <li className="nav-item">
                 <NavLink
@@ -100,7 +104,7 @@ function Navbar() {
                 </NavLink>
               </li>
 
-              <li className="nav-item">
+              <li className="nav-button">
                 <NavLink
                   to="/login"
                   className={({ isActive }) =>
@@ -108,13 +112,11 @@ function Navbar() {
                   }
                   onClick={closeMobileMenu}
                 >
-                  Login
+                  <Button $primary>Login</Button>
                 </NavLink>
               </li>
-
               
             </ul>
-      
           </div>
         </nav>
     </>

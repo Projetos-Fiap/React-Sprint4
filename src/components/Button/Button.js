@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
   cursor: pointer;
@@ -8,12 +8,21 @@ export const Button = styled.button`
   color: #fff;
   border: 2px solid #fff;
   margin: 0 1em;
-  transition: all 0.3s ease-out; /* Transition for all properties */
+  transition: all 0.3s ease-out;
+  font-size: 15px;
 
   &:hover {
-    background: #17cf97; /* Change background color on hover */
-    color: #242424; /* Change text color on hover */
+    background: #17cf97;
+    color: #242424;
     border: 2px solid transparent;
-    transition: 250ms; /* Transition duration for hover effect */
+    transition: 250ms;
   }
+
+  ${props =>
+    props.$primary &&
+    css`
+      background: #17cf97;
+      color: #242424;
+      border: 2px solid transparent;
+    `};
 `;

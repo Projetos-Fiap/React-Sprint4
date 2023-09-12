@@ -24,10 +24,10 @@ const App = () => {
     <Routes>
       <Route path="*" element={<ErrorPage />} />
       <Route path="/" element={<HomePage />} />
-      <Route path="/sobre-nos" element={<SobrePage />} />
-      <Route path="/contato" element={<ContactPage />} />
       <Route path="/mapa-dos-ecopontos" element={<MapPage />} />
       <Route path="/aprenda-mais" element={<AprendaPage />} />
+      <Route path="/sobre-nos" element={<SobrePage />} />
+      <Route path="/contato" element={<ContactPage />} />
       <Route path="/login" element={<LoginPage />} />
     </Routes>
     <Footer />
