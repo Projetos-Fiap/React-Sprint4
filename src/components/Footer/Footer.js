@@ -20,20 +20,20 @@ const FooterSubscription = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 24px;
-  padding: 24px;
+  margin-bottom: 10px;
+  padding: 20px;
   color: #fff;
 `;
 
 const FooterSubscriptionHeading = styled.p`
-  margin-bottom: 24px;
-  font-size: 24px;
-  color: white; /* Added to make heading white */
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: white; 
 `;
 
 const FooterSubscriptionText = styled.p`
-  margin-bottom: 24px;
-  font-size: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
 `;
 
 const InputAreas = styled.div`
