@@ -1,11 +1,143 @@
 import React, { useState } from 'react';
-import './Footer.css';
+import styled from 'styled-components';
 import { Button } from '../Button/Button';
 import { Link } from 'react-router-dom';
-// Importando ícones das mídias sociais
-import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa'; 
-// Importando logo
-import { FaRecycle } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { FaRecycle } from 'react-icons/fa';
+
+const FooterContainer = styled.div`
+  background-color: #263243;
+  padding: 2rem 0 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const FooterSubscription = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 24px;
+  color: #fff;
+`;
+
+const FooterSubscriptionHeading = styled.p`
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: white; /* Added to make heading white */
+`;
+
+const FooterSubscriptionText = styled.p`
+  margin-bottom: 24px;
+  font-size: 20px;
+`;
+
+const InputAreas = styled.div`
+  display: flex;
+  flex-direction: column; /* Changed to column for alignment */
+  align-items: center;
+`;
+
+const FooterInput = styled.input`
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 16px;
+  border: 1px solid #fff;
+`;
+
+const SubscriptionMessage = styled.div`
+  color: ${({ isSubscribed }) => (isSubscribed ? '#17cf97' : 'red')};
+  margin-top: 8px; /* Added margin-top to separate message from button */
+`;
+
+const FooterLinks = styled.div`
+  width: 100%;
+  max-width: 100px;
+  display: flex;
+  justify-content: center;
+`;
+
+const FooterLinkWrapper = styled.div`
+  display: flex;
+`;
+
+const FooterLinkItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px;
+  text-align: center;
+  width: 200px;
+  box-sizing: border-box;
+`;
+
+const FooterLinkTitle = styled.h2`
+  margin-bottom: 16px;
+  color: #fff;
+`;
+
+const FooterLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  &:hover {
+    color: #17cf97;
+    transition: 0.3s ease-out;
+  }
+`;
+
+const SocialMedia = styled.div`
+  max-width: 800px;
+  width: 100%;
+`;
+
+const SocialMediaWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+`;
+
+const FooterLogo = styled(Link)`
+  color: #17cf97;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+`;
+
+const WebsiteRights = styled.small`
+  color: #fff;
+  margin-bottom: 16px;
+`;
+
+const SocialIconLink = styled(Link)`
+  color: #fff;
+  font-size: 24px;
+  &:hover {
+    color: #17cf97;
+  }
+`;
 
 function Footer() {
   const [email, setEmail] = useState('');
@@ -29,17 +161,16 @@ function Footer() {
   };
 
   return (
-    <div className='footer-container'>
-      <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
+    <FooterContainer>
+      <FooterSubscription>
+        <FooterSubscriptionHeading>
           Cadastre-se na nossa newsletter para aprender mais sobre reciclagem!
-        </p>
-        <p className='footer-subscription-text'>
+        </FooterSubscriptionHeading>
+        <FooterSubscriptionText>
           Você pode cancelar a qualquer momento.
-        </p>
-        <div className='input-areas'>
-          <input
-            className='footer-input'
+        </FooterSubscriptionText>
+        <InputAreas>
+          <FooterInput
             name='email'
             type='email'
             placeholder='Seu Email'
@@ -47,83 +178,58 @@ function Footer() {
             onChange={handleEmailChange}
           />
           <Button onClick={handleSubscription}>Cadastrar</Button>
-          <div className='subscription-message'>
-            <p style={{ color: isSubscribed ? '#17cf97' : 'red' }}>
-              {subscriptionMessage}
-            </p>
-          </div>
-        </div>
-      </section>
-      <div class='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-            <h2>Sobre nós</h2>
-            <Link to='/sign-up'>Quem somos</Link>
-            <Link to='/'>Nossa missão</Link>
-          </div>
-
-          <div class='footer-link-items'>
-            <h2>Fale conosco</h2>
-            <Link to='/'>Contato</Link>
-            <Link to='/'>Suporte</Link>
-          </div>
-        </div>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-            <h2>Aprenda</h2>
-            <Link to='/'>Reportagens</Link>
-            <Link to='/'>Artigos</Link>
-          </div>
-
-        </div>
-      </div>
-      <section class='social-media'>
-        <div class='social-media-wrap'>
-          <div class='footer-logo'>
-            <Link to='/' className='social-logo'>
-            <FaRecycle className="navbar-icon" />
-              ReciclaSP
-              <i class='fab fa-typo3' />
-            </Link>
-          </div>
-          <small class='website-rights'>ReciclaSP © 2023</small>
-          <div class='social-icons'>
-            <Link
-              class='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <FaFacebook /> {/* Use o ícone do Facebook do React Icons */}
-            </Link>
-            <Link
-              class='social-icon-link instagram'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <FaInstagram /> {/* Use o ícone do Instagram do React Icons */}
-            </Link>
-            <Link
-              class='social-icon-link youtube'
-              to='/'
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <FaYoutube /> {/* Use o ícone do Youtube do React Icons */}
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <FaTwitter /> {/* Use o ícone do Twitter do React Icons */}
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+        </InputAreas>
+        <SubscriptionMessage isSubscribed={isSubscribed}>
+          {subscriptionMessage}
+        </SubscriptionMessage>
+      </FooterSubscription>
+      <FooterLinks>
+        <FooterLinkWrapper>
+          <FooterLinkItems>
+            <FooterLinkTitle>Sobre nós</FooterLinkTitle>
+            <FooterLink to='/sign-up'>Quem somos</FooterLink>
+            <FooterLink to='/'>Nossa missão</FooterLink>
+          </FooterLinkItems>
+        </FooterLinkWrapper>
+        <FooterLinkWrapper>
+          <FooterLinkItems>
+            <FooterLinkTitle>Fale conosco</FooterLinkTitle>
+            <FooterLink to='/'>Contato</FooterLink>
+            <FooterLink to='/'>Suporte</FooterLink>
+          </FooterLinkItems>
+        </FooterLinkWrapper>
+        <FooterLinkWrapper>
+          <FooterLinkItems>
+          <FooterLinkTitle>Aprenda</FooterLinkTitle>
+            <FooterLink to='/'>Reportagens</FooterLink>
+            <FooterLink to='/'>Artigos</FooterLink>
+          </FooterLinkItems>
+        </FooterLinkWrapper>
+      </FooterLinks>
+      <SocialMedia>
+        <SocialMediaWrap>
+          <FooterLogo to='/'>
+            <FaRecycle className='navbar-icon' />
+            ReciclaSP
+          </FooterLogo>
+          <WebsiteRights>ReciclaSP © 2023</WebsiteRights>
+          <SocialIcons>
+            <SocialIconLink to='/' target='_blank' aria-label='Facebook'>
+              <FaFacebook />
+            </SocialIconLink>
+            <SocialIconLink to='/' target='_blank' aria-label='Instagram'>
+              <FaInstagram />
+            </SocialIconLink>
+            <SocialIconLink to='/' target='_blank' aria-label='Youtube'>
+              <FaYoutube />
+            </SocialIconLink>
+            <SocialIconLink to='/' target='_blank' aria-label='Twitter'>
+              <FaTwitter />
+            </SocialIconLink>
+          </SocialIcons>
+        </SocialMediaWrap>
+      </SocialMedia>
+    </FooterContainer>
   );
 }
 
