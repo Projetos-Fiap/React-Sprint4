@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import './Footer.css';
 import { Button } from '../Button/Button';
 import { Link } from 'react-router-dom';
-
 // Importando ícones das mídias sociais
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa'; 
-
 // Importando logo
 import { FaRecycle } from "react-icons/fa";
 
