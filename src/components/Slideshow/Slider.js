@@ -15,13 +15,13 @@ export const sliderData = [
       image: Slide1,
       title: "Te ajudamos a cuidar de São Paulo",
       text: "Vamos ajudar a cidade reciclando nosso lixo? Aprenda mais com a gente",
-      path: "/aprenda-mais"
+      path: "/aprenda"
     },
     {
       image: Slide2,
       title: "Onde jogar meu lixo?",
       text: "Veja onde tem um ponto de reciclagem próximo a você",
-      path: "/mapa-dos-ecopontos"
+      path: "/mapa"
     },
     {
       image: Slide3,
@@ -33,7 +33,7 @@ export const sliderData = [
       image: Slide4,
       title: "Sobre nós",
       text: "Conheça mais sobre o projeto ReciclaSP",
-      path: "/sobre-nos"
+      path: "/sobre"
     },
 
   ];
