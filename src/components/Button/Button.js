@@ -1,30 +1,27 @@
-import React from 'react';
-import './Button.css';
+import styled, { css } from 'styled-components';
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
+export const Button = styled.button`
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 10px;
+  background: #263243;
+  color: #fff;
+  border: 2px solid #fff;
+  transition: all 0.3s ease-out;
+  font-size: 15px;
 
-const SIZES = ['btn--medium', 'btn--large'];
+  &:hover {
+    background: #17cf97;
+    color: #242424;
+    border: 2px solid transparent;
+    transition: 250ms;
+  }
 
-export const Button = ({
-  children,
-  type,
-  onClick,
-  buttonStyle,
-  buttonSize
-}) => {
-  const checkButtonStyle = STYLES.includes(buttonStyle)
-    ? buttonStyle
-    : STYLES[0];
-
-  const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
-
-  return (
-    <button
-      className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-      onClick={onClick}
-      type={type}
-    >
-      {children}
-    </button>
-  );
-};
+  ${props =>
+    props.$primary &&
+    css`
+      background: #17cf97;
+      color: #242424;
+      border: 2px solid transparent;
+    `};
+`;

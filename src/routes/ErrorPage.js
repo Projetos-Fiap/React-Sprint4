@@ -1,17 +1,30 @@
-import { useRouteError } from "react-router-dom";
-import "../App.css";
+import React from "react";
+import styled from "styled-components";
 
-export default function ErrorPage() {
-  const error = useRouteError();
-  console.error(error);
+const ErrorPageContainer = styled.div`
+  text-align: center;
+`;
 
+const ErrorPageTitle = styled.h2`
+  font-size: 2.5rem;
+  color: #263243;
+  margin-bottom: 0.5em;
+`;
+
+const ErrorPageText = styled.p`
+  font-size: 1.5rem;
+  margin-bottom: 1em; 
+`;
+
+function ErrorPage() {
   return (
-    <div id="error-page">
-      <h1>Oh não!</h1>
-      <p>Essa é uma página de erro.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
+    <div className="errorpage">
+      <ErrorPageContainer>
+        <ErrorPageTitle>Oh não!</ErrorPageTitle>
+        <ErrorPageText>Não achamos o que você estava procurando.</ErrorPageText>
+      </ErrorPageContainer> 
     </div>
   );
 }
+
+export default ErrorPage;

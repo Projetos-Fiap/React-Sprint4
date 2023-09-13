@@ -4,11 +4,10 @@ import { NavLink } from "react-router-dom";
 
 import { FaRecycle } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
+
+import { Button } from '../Button/Button';
 
 import "./Navbar.css";
-import { Button } from "../Button/Button";
-
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -55,21 +54,10 @@ function Navbar() {
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) =>
-                    "nav-links" + (isActive ? " activated" : "")
-                  }
-                  onClick={closeMobileMenu}
-                >
-                  Sobre
-                </NavLink>
-              </li>
 
               <li className="nav-item">
                 <NavLink
-                  to="/page1"
+                  to="/mapa-dos-ecopontos"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
@@ -81,7 +69,7 @@ function Navbar() {
 
               <li className="nav-item">
                 <NavLink
-                  to="/page2"
+                  to="/aprenda-mais"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
@@ -90,10 +78,35 @@ function Navbar() {
                   Aprenda mais
                 </NavLink>
               </li>
+
+              <li className="nav-item">
+                <NavLink
+                  to="/beneficios"
+                  className={({ isActive }) =>
+                    "nav-links" + (isActive ? " activated" : "")
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Benefícios
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink
+                  to="/sobre-nos"
+                  className={({ isActive }) =>
+                    "nav-links" + (isActive ? " activated" : "")
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Sobre
+                </NavLink>
+              </li>
+
               
               <li className="nav-item">
                 <NavLink
-                  to="/contact"
+                  to="/contato"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
@@ -103,21 +116,19 @@ function Navbar() {
                 </NavLink>
               </li>
 
-              <li className="nav-item">
+              <li className="nav-button">
                 <NavLink
-                  to="/signup"
+                  to="/login"
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
                   onClick={closeMobileMenu}
                 >
-                  Login
+                  <Button $primary>Login</Button>
                 </NavLink>
               </li>
-
               
             </ul>
-      
           </div>
         </nav>
     </>
@@ -125,3 +136,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+

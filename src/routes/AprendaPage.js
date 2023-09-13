@@ -1,12 +1,11 @@
 import React from "react";
 
-
-function Page2() {
+function AprendaPage() {
   return (
-    <div className="page2">
+    <div className="aprendapage">
       <h1>Aprenda mais sobre reciclagem</h1>
     </div>
   );
 }
 
-export default Page2;
+export default AprendaPage;

@@ -1,51 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 /* CSS global */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* CSS geral das páginas */
-.home,
-.about,
-.page1,
-.page2,
-.contact,
-.signup {
+.homepage,
+.sobrepage,
+.mappage,
+.aprendapage,
+.contactpage,
+.loginpage,
+.beneficiospage,
+.errorpage {
   display: flex;
-  height: 90vh;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background-color: #ffffff;
-  color: #000000;
 }
 
-/* CSS para o formulário de contato */
-.contact form {
-  display: block;
-  background-color: #ffffff;
-  box-shadow: 2px 2px 4px 3px #ddd;
-  margin: 10px auto;
-  max-width: 800px;
-  padding: 80px;
-  text-align: center;
-}
-
-.contact form input, textarea {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 10px auto;
-  padding: 20px;
-  font-size: 18px;
-  border: 1px solid #ddd;
-}
-
-.contact Button {
+/* Botão da página de contato */
+.contactpage Button {
   width: 150px;
   padding: 10px;
   margin: 30px auto;
@@ -54,29 +35,16 @@
 
 
 
-.page-icon {
-  margin-left: 1rem;
-  font-size: 100px;
-}
-
-#error-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  font-size: 2em;
-  margin-top: 500px;
-}
-
 @media screen and (max-width: 960px) {
-  .home,
-  .about,
-  .page1,
-  .page2,
-  .contact,
-  .signup {
-    font-size: 1.3rem;
+  .homepage,
+  .sobrepage,
+  .mappage,
+  .aprendapage,
+  .contactpage,
+  .loginpage,
+  .errorpage,
+  .beneficiospage {
+    font-size: 1.0rem;
   }
 
   .page-icon {

@@ -1,64 +1,40 @@
-import React from "react";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-// Importando Componentes
+// Importando componentes, Header e Footer
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
-// Importando as páginas
-import Home from "./routes/Home";
-import About from "./routes/About";
-import Contact from "./routes/Contact";
-import ErrorPage from "./routes/ErrorPage";
-import Page1 from "./routes/Page1";
-import Page2 from "./routes/Page2";
-import Signup from "./routes/Signup";
+// Importando Páginas (Routes)
+import HomePage from "./routes/HomePage";
+import MapPage from "./routes/MapPage";
+import AprendaPage from "./routes/AprendaPage";
+import BeneficiosPage from "./routes/BeneficiosPage";
+import SobrePage from "./routes/SobrePage";
+import ContactPage from "./routes/ContactPage";
+import LoginPage from "./routes/LoginPage";
+import ErrorPage from "./routes/ErrorPage"
 
 // Importando CSS
-import "./App.css";
+import "./App.css"; // 
 
-const AppLayout = () => {
+const App = () => {
   return (
     <>
-      <Navbar />
-      <Outlet />
-      <Footer />
+    <Navbar />
+    <Routes>
+      <Route path="*" element={<ErrorPage />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/mapa-dos-ecopontos" element={<MapPage />} />
+      <Route path="/aprenda-mais" element={<AprendaPage />} />
+      <Route path="/sobre-nos" element={<SobrePage />} />
+      <Route path="/beneficios" element={<BeneficiosPage />} />
+      <Route path="/contato" element={<ContactPage />} />
+      <Route path="/login" element={<LoginPage />} />
+    </Routes>
+    <Footer />
     </>
-  );
-};
+  )
+}
 
-const router = createBrowserRouter([
-  {
-    element: <AppLayout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
-      {
-        path: "contact",
-        element: <Contact />,
-      },
-      {
-        path: "page1",
-        element: <Page1 />,
-      },
-      {
-        path: "page2",
-        element: <Page2 />,
-      },
-      {
-        path: "signup",
-        element: <Signup />,
-      },
-    ],
-  },
-]);
-
-export default router; // Exporte o router
-
+export default App;
