@@ -210,9 +210,9 @@ function Footer() {
         <SocialMediaWrap>
           <FooterLogo to='/'>
             <FaRecycle className='navbar-icon' />
-            ReciclaSP
+            TheGreenProject
           </FooterLogo>
-          <WebsiteRights>ReciclaSP © 2023</WebsiteRights>
+          <WebsiteRights>TheGreenProject © 2023</WebsiteRights>
           <SocialIcons>
             <SocialIconLink to='/' target='_blank' aria-label='Facebook'>
               <FaFacebook />

@@ -139,7 +139,7 @@ function Navbar() {
 
             <NavbarLogo to="/" onClick={closeMobileMenu}>
               <NavbarIcon />
-              ReciclaSP
+              TheGreenProject
             </NavbarLogo>
 
             <MenuIcon onClick={handleClick}>
