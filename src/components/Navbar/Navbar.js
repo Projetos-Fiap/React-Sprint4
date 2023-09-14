@@ -205,14 +205,14 @@ function Navbar() {
 
               <NavItem>
                 <NavLinks
-                  to="/login"
+                  to="/sign-in"
                   onClick={closeMobileMenu}
                 >
                   <Button $primary>Login</Button>
                 </NavLinks>
               </NavItem>
               
-            </NavMenu>
+            </NavMenu>  
           </NavbarContent>
         </NavbarContainer>
     </>

@@ -1,9 +1,57 @@
 import React, { useState } from "react";
 import Input from "../Input/Input";
-import Button from "../Button2/Button";
-import * as C from "./Styles";
+import { Button } from "../Button/Button";
+import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+`;
+
+const Content = styled.div`
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 2px 2px 4px 3px #ddd;
+  background-color: white;
+  max-width: 350px;
+  padding: 40px;
+  border-radius: 5px;
+`;
+
+const Label = styled.h2`
+  font-size: 2.5rem;
+  color: #263243;
+  margin-bottom: 0.5em;
+`;
+
+const LabelSignin = styled.label`
+  font-size: 16px;
+  color: #676767;
+`;
+
+const LabelError = styled.label`
+  font-size: 14px;
+  color: red;
+`;
+
+const Strong = styled.strong`
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: #676767;
+  }
+`;
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -35,9 +83,9 @@ const Signup = () => {
   };
 
   return (
-    <C.Container>
-      <C.Label>SISTEMA DE LOGIN</C.Label>
-      <C.Content>
+    <Container>
+      <Label>CADASTRO</Label>
+      <Content>
         <Input
           type="email"
           placeholder="Digite seu E-mail"
@@ -56,16 +104,16 @@ const Signup = () => {
           value={senha}
           onChange={(e) => [setSenha(e.target.value), setError("")]}
         />
-        <C.labelError>{error}</C.labelError>
-        <Button Text="Inscrever-se" onClick={handleSignup} />
-        <C.LabelSignin>
+        <LabelError>{error}</LabelError>
+        <Button onClick={handleSignup} >Registrar</Button>
+        <LabelSignin>
           Já tem uma conta?
-          <C.Strong>
-            <Link to="/login">&nbsp;Entre</Link>
-          </C.Strong>
-        </C.LabelSignin>
-      </C.Content>
-    </C.Container>
+          <Strong>
+            <Link to="/sign-in">&nbsp;Entre</Link>
+          </Strong>
+        </LabelSignin>
+      </Content>
+    </Container>
   );
 };
 
