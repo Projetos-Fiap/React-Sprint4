@@ -26,14 +26,12 @@
 }
 
 /* Botão da página de contato */
-.contactpage Button {
+/* .contactpage Button {
   width: 150px;
   padding: 10px;
   margin: 30px auto;
   font-size: 20px;
-}
-
-
+} */
 
 @media screen and (max-width: 960px) {
   .homepage,
