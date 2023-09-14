@@ -12,7 +12,6 @@ import AprendaPage from "./routes/AprendaPage";
 import BeneficiosPage from "./routes/BeneficiosPage";
 import SobrePage from "./routes/SobrePage";
 import ContactPage from "./routes/ContactPage";
-// import LoginPage from "./routes/LoginPage";
 import ErrorPage from "./routes/ErrorPage"
 
 import Singup from "./components/Singup/Singup";
@@ -34,8 +33,8 @@ const App = () => {
       <Route path="/sobre" element={<SobrePage />} />
       <Route path="/beneficios" element={<BeneficiosPage />} />
       <Route path="/contato" element={<ContactPage />} />
-      <Route path="/login" element={<Singin />} />
-      <Route path="/singup" element={<Singup />} />
+      <Route path="/sign-in" element={<Singin />} />
+      <Route path="/sign-up" element={<Singup />} />
     </Routes>
     <Footer />
     </>

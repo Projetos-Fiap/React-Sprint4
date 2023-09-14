@@ -50,7 +50,7 @@ const Signin = () => {
         <C.LabelSignup>
           Não tem uma conta?
           <C.Strong>
-            <Link to="/Singup">&nbsp;Registre-se</Link>
+            <Link to="/sign-up">&nbsp;Registre-se</Link>
           </C.Strong>
         </C.LabelSignup>
       </C.Content>
