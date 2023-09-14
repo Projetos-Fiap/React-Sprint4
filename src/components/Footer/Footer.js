@@ -7,7 +7,7 @@ import { FaRecycle } from 'react-icons/fa';
 
 const FooterContainer = styled.div`
   background-color: #263243;
-  padding: 2rem 0 0.5rem 0;
+  padding: 1rem 0 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,19 +21,25 @@ const FooterSubscription = styled.div`
   align-items: center;
   text-align: center;
   margin-bottom: 10px;
-  padding: 20px;
-  color: #fff;
+  padding: 10px;
+  color: white;
 `;
 
 const FooterSubscriptionHeading = styled.p`
   margin-bottom: 16px;
-  font-size: 20px;
+  font-size: 1.2rem;
   color: white; 
+  @media screen and (max-width: 960px) {
+    font-size: 1.0rem;
+    }
 `;
 
 const FooterSubscriptionText = styled.p`
   margin-bottom: 20px;
   font-size: 14px;
+  @media screen and (max-width: 960px) {
+    font-size: 12px;
+    }
 `;
 
 const InputAreas = styled.div`
@@ -43,11 +49,10 @@ const InputAreas = styled.div`
 `;
 
 const FooterInput = styled.input`
-  padding: 8px 20px;
-  border-radius: 2px;
+  padding: 8px 25px;
+  border-radius: 5px;
   outline: none;
-  border: none;
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 16px;
   border: 1px solid #fff;
 `;
@@ -59,7 +64,7 @@ const SubscriptionMessage = styled.div`
 
 const FooterLinks = styled.div`
   width: 100%;
-  max-width: 100px;
+  max-width: 150px;
   display: flex;
   justify-content: center;
 `;
@@ -72,15 +77,10 @@ const FooterLinkItems = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 16px;
+  margin: 10px;
   text-align: center;
   width: 200px;
   box-sizing: border-box;
-`;
-
-const FooterLinkTitle = styled.h2`
-  margin-bottom: 16px;
-  color: #fff;
 `;
 
 const FooterLink = styled(Link)`
@@ -94,7 +94,7 @@ const FooterLink = styled(Link)`
 `;
 
 const SocialMedia = styled.div`
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
 `;
 
@@ -102,16 +102,23 @@ const SocialMediaWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 80%;
   max-width: 1000px;
   margin: 40px auto 0 auto;
+  @media screen and (max-width: 960px) {
+    width: 95%
+    
+    }
 `;
 
 const SocialIcons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 240px;
+  width: 200px;
+  @media screen and (max-width: 960px) {
+    width: 150px;
+    }
 `;
 
 const FooterLogo = styled(Link)`
@@ -120,7 +127,7 @@ const FooterLogo = styled(Link)`
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   margin-bottom: 16px;
@@ -134,6 +141,7 @@ const WebsiteRights = styled.small`
 const SocialIconLink = styled(Link)`
   color: #fff;
   font-size: 24px;
+  margin-bottom: 10px;
   &:hover {
     color: #17cf97;
   }
@@ -186,25 +194,19 @@ function Footer() {
       <FooterLinks>
         <FooterLinkWrapper>
           <FooterLinkItems>
-            <FooterLinkTitle>Sobre nós</FooterLinkTitle>
-            <FooterLink to='/sign-up'>Quem somos</FooterLink>
-            <FooterLink to='/'>Nossa missão</FooterLink>
+            <FooterLink to='/mapa'>Pontos de coleta</FooterLink>
+            <FooterLink to='/aprenda'>Aprenda sobre reciclagem</FooterLink>
+            <FooterLink to='/beneficios'>Benefícios</FooterLink>
           </FooterLinkItems>
         </FooterLinkWrapper>
         <FooterLinkWrapper>
           <FooterLinkItems>
-            <FooterLinkTitle>Fale conosco</FooterLinkTitle>
-            <FooterLink to='/'>Contato</FooterLink>
-            <FooterLink to='/'>Suporte</FooterLink>
+            <FooterLink to='/sobre'>Sobre nós</FooterLink>
+            <FooterLink to='/contato'>Fale conosco</FooterLink>
+            <FooterLink to='/sign-up'>Registre-se</FooterLink>
           </FooterLinkItems>
         </FooterLinkWrapper>
-        <FooterLinkWrapper>
-          <FooterLinkItems>
-          <FooterLinkTitle>Aprenda</FooterLinkTitle>
-            <FooterLink to='/'>Reportagens</FooterLink>
-            <FooterLink to='/'>Artigos</FooterLink>
-          </FooterLinkItems>
-        </FooterLinkWrapper>
+
       </FooterLinks>
       <SocialMedia>
         <SocialMediaWrap>
