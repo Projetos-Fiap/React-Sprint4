@@ -2,8 +2,8 @@ import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import Home from "../routes/HomePage";
-import Signin from "../components/Singin/Singin";
-import Signup from "../components/Singup/Singup";
+import Signin from "../components/Signin/Signin";
+import Signup from "../components/Signup/Signup";
 
 const PrivateRoute = ({ element: Element }) => {
   const { signed } = useAuth();

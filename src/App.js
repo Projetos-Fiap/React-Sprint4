@@ -14,8 +14,8 @@ import SobrePage from "./routes/SobrePage";
 import ContactPage from "./routes/ContactPage";
 import ErrorPage from "./routes/ErrorPage"
 
-import Singup from "./components/Singup/Singup";
-import Singin from "./components/Singin/Singin";
+import Singup from "./components/Signup/Signup";
+import Singin from "./components/Signin/Signin";
 import { AuthProvider } from "./contexts/auth";
 
 // Importando CSS
