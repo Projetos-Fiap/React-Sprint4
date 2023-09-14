@@ -1,12 +1,13 @@
 import React from "react";
+import RoutesApp from "../routes2";
+import { AuthProvider } from "../contexts/auth";
+import GlobalStyle from "../styles/global";
 
-function LoginPage() {
-  return (
-    <div className="loginpage">
-      <h2>Login</h2>
-      
-    </div>
-  );
-}
+const App = () => (
+  <AuthProvider>
+    <RoutesApp />
+    <GlobalStyle />
+  </AuthProvider>
+);
 
-export default LoginPage;
+export default App;
