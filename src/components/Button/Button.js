@@ -24,4 +24,13 @@ export const Button = styled.button`
       color: #242424;
       border: 2px solid transparent;
     `};
+
+    ${props =>
+    props.$contact &&
+    css`
+      width: 150px;
+      padding: 10px;
+      margin: 30px auto;
+      font-size: 20px;
+    `};
 `;

@@ -46,6 +46,7 @@ const AlertMessage = styled.div`
   margin-top: 10px;
 `;
 
+
 function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -111,7 +112,9 @@ function ContactPage() {
             value={formData.message}
             onChange={handleChange}
           />
-          <Button type="submit">Enviar</Button>
+        
+            <Button $contact type="submit" >Enviar</Button>
+         
           <AlertMessage success={alertMessage === "Mensagem enviada com sucesso!"}>
             {alertMessage}
           </AlertMessage>
