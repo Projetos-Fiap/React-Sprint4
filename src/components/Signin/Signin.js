@@ -77,31 +77,33 @@ const Signin = () => {
   };
 
   return (
-    <Container>
-      <Content>
-      <Label>LOGIN</Label>
-        <Input
-          type="email"
-          placeholder="Digite seu email"
-          value={email}
-          onChange={(e) => [setEmail(e.target.value), setError("")]}
-        />
-        <Input
-          type="password"
-          placeholder="Digite sua senha"
-          value={senha}
-          onChange={(e) => [setSenha(e.target.value), setError("")]}
-        />
-        <LabelError>{error}</LabelError>
-        <Button onClick={handleLogin} >Entrar</Button>
-        <LabelSignup>
-          Não tem uma conta?
-          <Strong>
-            <Link to="/sign-up">&nbsp;Registre-se</Link>
-          </Strong>
-        </LabelSignup>
-      </Content>
-    </Container>
+    <div className="signinpage">
+      <Container>
+        <Content>
+        <Label>LOGIN</Label>
+          <Input
+            type="email"
+            placeholder="Digite seu email"
+            value={email}
+            onChange={(e) => [setEmail(e.target.value), setError("")]}
+          />
+          <Input
+            type="password"
+            placeholder="Digite sua senha"
+            value={senha}
+            onChange={(e) => [setSenha(e.target.value), setError("")]}
+          />
+          <LabelError>{error}</LabelError>
+          <Button onClick={handleLogin} >Entrar</Button>
+          <LabelSignup>
+            Não tem uma conta?
+            <Strong>
+              <Link to="/sign-up">&nbsp;Registre-se</Link>
+            </Strong>
+          </LabelSignup>
+        </Content>
+      </Container>
+    </div>  
   );
 };
 

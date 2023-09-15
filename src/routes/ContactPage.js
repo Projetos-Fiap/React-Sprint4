@@ -28,11 +28,12 @@ const FormText = styled.p`
 
 const FormInput = styled.input`
   width: 100%;
-  padding: 10px;
+  padding: 16px 15px;
   margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f0f2f5;
   @media screen and (max-width: 960px) {
     font-size: 0.7rem;
     }
@@ -40,11 +41,12 @@ const FormInput = styled.input`
 
 const FormTextarea = styled.textarea`
   width: 100%;
-  padding: 10px;
+  padding: 16px 15px;
   margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f0f2f5;
   @media screen and (max-width: 960px) {
     font-size: 0.7rem;
     }

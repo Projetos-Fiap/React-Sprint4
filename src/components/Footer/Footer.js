@@ -54,7 +54,8 @@ const FooterInput = styled.input`
   outline: none;
   font-size: 14px;
   margin-bottom: 16px;
-  border: 1px solid #fff;
+  border: none;
+  background-color: #f0f2f5;
 `;
 
 const SubscriptionMessage = styled.div`
