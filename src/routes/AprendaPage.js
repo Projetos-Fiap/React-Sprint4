@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import BasicExample from "../components/Cards/Cards";
 
 const AprendaPageContainer = styled.div`
   display: flex;
@@ -24,6 +25,7 @@ function AprendaPage() {
       <AprendaPageContainer>
         <AprendaPageTitle>Aprenda</AprendaPageTitle>
         <AprendaPageText>Veja dicas de como reciclar corretamente</AprendaPageText>  
+        <BasicExample />
       </AprendaPageContainer>
     </div>
   );

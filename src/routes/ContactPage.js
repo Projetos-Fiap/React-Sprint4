@@ -43,7 +43,7 @@ const FormTextarea = styled.textarea`
   padding: 10px;
   margin-bottom: 1em;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 1rem;
   @media screen and (max-width: 960px) {
     font-size: 0.7rem;
