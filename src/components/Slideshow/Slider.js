@@ -26,13 +26,13 @@ export const sliderData = [
     {
       image: Slide3,
       title: "Ganhe pontos",
-      text: "Sabia que você pode trocar seu lixo por benefícios?",
+      text: "Sabia que você pode trocar seu lixo reciclável por benefícios?",
       path: "/beneficios"
     },
     {
       image: Slide4,
       title: "Sobre nós",
-      text: "Conheça mais sobre o projeto ReciclaSP",
+      text: "Conheça mais sobre o nosso projeto",
       path: "/sobre"
     },
 

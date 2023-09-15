@@ -9,17 +9,20 @@ const ContactPageForm = styled.form`
   margin: 0 auto;
   padding: 50px;
   text-align: center;
-  max-width: 750px;
+  max-height: 85%;
+  max-width: 50%;
+  border-radius: 10px;
+  @media screen and (max-width: 960px) {
+    max-width: 75%;
+    }
 `;
 
 const FormTitle = styled.h2`
-  font-size: 2.5rem;
   color: #263243;
   margin-bottom: 0.5em;
 `;
 
 const FormText = styled.p`
-  font-size: 1.5rem;
   margin-bottom: 1em;
 `;
 
@@ -28,8 +31,11 @@ const FormInput = styled.input`
   padding: 10px;
   margin-bottom: 1em;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 1rem;
+  @media screen and (max-width: 960px) {
+    font-size: 0.7rem;
+    }
 `;
 
 const FormTextarea = styled.textarea`
@@ -37,8 +43,11 @@ const FormTextarea = styled.textarea`
   padding: 10px;
   margin-bottom: 1em;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 1rem;
+  @media screen and (max-width: 960px) {
+    font-size: 0.7rem;
+    }
 `;
 
 const AlertMessage = styled.div`

@@ -23,7 +23,7 @@ const Content = styled.div`
   width: 100%;
   box-shadow: 2px 2px 4px 3px #ddd;
   background-color: white;
-  max-width: 350px;
+  max-width: 450px;
   padding: 40px;
   border-radius: 5px;
 `;
@@ -84,23 +84,23 @@ const Signup = () => {
 
   return (
     <Container>
-      <Label>CADASTRO</Label>
       <Content>
+      <Label>CADASTRO</Label>
         <Input
           type="email"
-          placeholder="Digite seu E-mail"
+          placeholder="Digite seu e-mail"
           value={email}
           onChange={(e) => [setEmail(e.target.value), setError("")]}
         />
         <Input
           type="email"
-          placeholder="Confirme seu E-mail"
+          placeholder="Confirme seu e-mail"
           value={emailConf}
           onChange={(e) => [setEmailConf(e.target.value), setError("")]}
         />
         <Input
           type="password"
-          placeholder="Digite sua Senha"
+          placeholder="Digite sua senha"
           value={senha}
           onChange={(e) => [setSenha(e.target.value), setError("")]}
         />

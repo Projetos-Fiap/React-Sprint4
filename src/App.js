@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { AuthProvider } from "./contexts/auth";
 
 // Importando componentes, Header e Footer
 import Navbar from "./components/Navbar/Navbar";
@@ -13,10 +14,8 @@ import BeneficiosPage from "./routes/BeneficiosPage";
 import SobrePage from "./routes/SobrePage";
 import ContactPage from "./routes/ContactPage";
 import ErrorPage from "./routes/ErrorPage"
-
 import Signup from "./components/Signup/Signup";
 import Signin from "./components/Signin/Signin";
-import { AuthProvider } from "./contexts/auth";
 
 // Importando CSS
 import "./App.css"; // 
