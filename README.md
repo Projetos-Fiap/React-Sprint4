@@ -35,7 +35,7 @@ Além disso, pretendemos desenvolver uma máquina apelidada de ***"GreenMachine"
 <li>Lucas Feijó (RM99727) - 1ESPW</li>
 <li>Vitor Maia (RM99658) - 1ESPW</li>
 
-### Instruções
+# Instruções
 Primeiramente, é necessário ter o [Node.js](https://nodejs.org/en) instalado em sua máquina.
 
 Depois, clone esse repositório remoto ou faça o download do .zip.
