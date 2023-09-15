@@ -15,7 +15,6 @@
 .aprendapage,
 .contactpage,
 .loginpage,
-.beneficiospage,
 .errorpage,
 .signinpage,
 .signuppage{
@@ -27,6 +26,11 @@
   font-size: 1.5rem;
 }
 
+.sobrepage
+{
+  height: fit-content
+}
+
 @media screen and (max-width: 960px) {
   .homepage,
   .sobrepage,
@@ -35,7 +39,6 @@
   .contactpage,
   .loginpage,
   .errorpage,
-  .beneficiospage,
   .signinpage,
   .signuppage {
     font-size: 1.2rem;
@@ -49,8 +52,9 @@
 }
 
 @media screen and (max-width: 960px) {
-  .aprendapage {
-    margin-top: 2rem;
+  .aprendapage,
+  .sobrepage {
+    margin-bottom: 3rem;
     height: fit-content;
   }
   

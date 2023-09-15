@@ -14,6 +14,9 @@ const AprendaPageContainer = styled.div`
   align-items: center;
   justify-content: center;
   max-width: 80%;
+  @media screen and (max-width: 960px) {
+    margin-top: 2rem;
+  }
 `;
 
 const AprendaPageTitle = styled.h2`
@@ -90,7 +93,7 @@ function AprendaPage() {
             <Card.Body>
               <Card.Title style={{ fontSize: '1.5rem' }}>Perguntas frequentes</Card.Title>
               <Card.Text style={{ fontSize: '1.2rem' }}>
-               Aqui você encontra respostas paras as principais dúvidas sobre a reciclagem. 
+               Aqui você encontra respostas para as principais dúvidas sobre reciclagem. 
               </Card.Text>
             </Card.Body>
             <Button style={{ margin: '1rem auto', display: 'block', width: '12rem' }}>Saiba mais</Button>

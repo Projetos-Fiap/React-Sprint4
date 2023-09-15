@@ -197,17 +197,14 @@ function Footer() {
           <FooterLinkItems>
             <FooterLink to='/mapa'>Pontos de coleta</FooterLink>
             <FooterLink to='/aprenda'>Aprenda sobre reciclagem</FooterLink>
-            <FooterLink to='/beneficios'>Benefícios</FooterLink>
           </FooterLinkItems>
         </FooterLinkWrapper>
         <FooterLinkWrapper>
           <FooterLinkItems>
             <FooterLink to='/sobre'>Sobre nós</FooterLink>
             <FooterLink to='/contato'>Fale conosco</FooterLink>
-            <FooterLink to='/sign-up'>Registre-se</FooterLink>
           </FooterLinkItems>
         </FooterLinkWrapper>
-
       </FooterLinks>
       <SocialMedia>
         <SocialMediaWrap>
