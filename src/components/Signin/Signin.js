@@ -23,7 +23,7 @@ const Content = styled.div`
   width: 100%;
   box-shadow: 2px 2px 4px 3px #ddd;
   background-color: white;
-  max-width: 350px;
+  max-width: 450px;
   padding: 40px;
   border-radius: 5px;
 `;
@@ -78,17 +78,17 @@ const Signin = () => {
 
   return (
     <Container>
-      <Label>LOGIN</Label>
       <Content>
+      <Label>LOGIN</Label>
         <Input
           type="email"
-          placeholder="Digite seu E-mail"
+          placeholder="Digite seu email"
           value={email}
           onChange={(e) => [setEmail(e.target.value), setError("")]}
         />
         <Input
           type="password"
-          placeholder="Digite sua Senha"
+          placeholder="Digite sua senha"
           value={senha}
           onChange={(e) => [setSenha(e.target.value), setError("")]}
         />
