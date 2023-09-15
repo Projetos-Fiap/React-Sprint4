@@ -174,15 +174,6 @@ function Navbar() {
 
               <NavItem>
                 <NavLinks
-                  to="/beneficios"
-                  onClick={closeMobileMenu}
-                >
-                  Benefícios
-                </NavLinks>
-              </NavItem>
-
-              <NavItem>
-                <NavLinks
                   to="/sobre"
                   onClick={closeMobileMenu}
                 >

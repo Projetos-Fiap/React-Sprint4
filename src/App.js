@@ -10,7 +10,6 @@ import Footer from "./components/Footer/Footer";
 import HomePage from "./routes/HomePage";
 import MapPage from "./routes/MapPage";
 import AprendaPage from "./routes/AprendaPage";
-import BeneficiosPage from "./routes/BeneficiosPage";
 import SobrePage from "./routes/SobrePage";
 import ContactPage from "./routes/ContactPage";
 import ErrorPage from "./routes/ErrorPage"
@@ -33,7 +32,6 @@ const App = () => {
         <Route path="/mapa" element={<MapPage />} />
         <Route path="/aprenda" element={<AprendaPage />} />
         <Route path="/sobre" element={<SobrePage />} />
-        <Route path="/beneficios" element={<BeneficiosPage />} />
         <Route path="/contato" element={<ContactPage />} />
         <Route path="/sign-in" element={<Signin />} />
         <Route path="/sign-up" element={<Signup />} />
