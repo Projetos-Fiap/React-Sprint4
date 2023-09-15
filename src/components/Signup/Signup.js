@@ -83,6 +83,7 @@ const Signup = () => {
   };
 
   return (
+  <div className="signuppage">  
     <Container>
       <Content>
       <Label>CADASTRO</Label>
@@ -114,6 +115,7 @@ const Signup = () => {
         </LabelSignin>
       </Content>
     </Container>
+  </div>  
   );
 };
 

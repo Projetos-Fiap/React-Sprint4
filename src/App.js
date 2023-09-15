@@ -19,6 +19,8 @@ import Signin from "./components/Signin/Signin";
 
 // Importando CSS
 import "./App.css"; // 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
   return (

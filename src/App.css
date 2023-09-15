@@ -16,12 +16,14 @@
 .contactpage,
 .loginpage,
 .beneficiospage,
-.errorpage {
+.errorpage,
+.signinpage,
+.signuppage{
   display: flex;
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #fefefe;
   font-size: 1.5rem;
 }
 
@@ -33,7 +35,9 @@
   .contactpage,
   .loginpage,
   .errorpage,
-  .beneficiospage {
+  .beneficiospage,
+  .signinpage,
+  .signuppage {
     font-size: 1.2rem;
   }
 
@@ -42,4 +46,12 @@
     margin-left: 1rem;
     font-size: 80px;
   }
+}
+
+@media screen and (max-width: 960px) {
+  .aprendapage {
+    margin-top: 2rem;
+    height: fit-content;
+  }
+  
 }
