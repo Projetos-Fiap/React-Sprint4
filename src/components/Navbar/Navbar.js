@@ -129,80 +129,116 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  const [user, setUser] = useState();
+
+  const signout = () => {
+    setUser(null);
+    localStorage.removeItem("user_token");
+  };
+
+  const closeMobileMenuAndSignout = () => {
+    closeMobileMenu();
+    signout();
+  }
+
+  const userToken = localStorage.getItem("user_token");
+
+  let texto = '';
+  let display = '';
+  let apelido = '';
+
+  if (userToken) {
+    texto = "Logout";
+    display = 'flex';
+    apelido = 'Bem vindo, ' + JSON.parse(userToken)?.email.split("@")[0] + '!';
+  } else {
+    texto = "Login";
+    display = 'none';
+  };
+
+
+
+
   return (
     <>
-        <NavbarContainer>
-          <NavbarContent>
+      <NavbarContainer>
+        <NavbarContent>
 
-            <NavbarLogo to="/" onClick={closeMobileMenu}>
-              <NavbarIcon />
-              TheGreenProject
-            </NavbarLogo>
+          <NavbarLogo to="/" onClick={closeMobileMenu}>
+            <NavbarIcon />
+            TheGreenProject
+          </NavbarLogo>
 
-            <MenuIcon onClick={handleClick}>
-              {click ? <FaTimes color="white" /> : <FaBars color="white" />}
-            </MenuIcon>
+          <MenuIcon onClick={handleClick}>
+            {click ? <FaTimes color="white" /> : <FaBars color="white" />}
+          </MenuIcon>
 
-            <NavMenu className={click ? "nav-menu active" : "nav-menu"}>
-              
-              <NavItem>
-                <NavLinks
-                  to="/"
-                  onClick={closeMobileMenu}
-                >
-                  Home
-                </NavLinks>
-              </NavItem>
+          <NavMenu className={click ? "nav-menu active" : "nav-menu"}>
 
-              <NavItem>
-                <NavLinks
-                  to="/mapa"
-                  onClick={closeMobileMenu}
-                >
-                  Mapa
-                </NavLinks>
-              </NavItem>
+            <NavItem>
+              <NavLinks
+                to="/"
+                onClick={closeMobileMenu}
+              >
+                Home
+              </NavLinks>
+            </NavItem>
 
-              <NavItem>
-                <NavLinks
-                  to="/aprenda"
-                  onClick={closeMobileMenu}
-                >
-                  Aprenda
-                </NavLinks>
-              </NavItem>
+            <NavItem>
+              <NavLinks
+                to="/mapa"
+                onClick={closeMobileMenu}
+              >
+                Mapa
+              </NavLinks>
+            </NavItem>
 
-              <NavItem>
-                <NavLinks
-                  to="/sobre"
-                  onClick={closeMobileMenu}
-                >
-                  Sobre
-                </NavLinks>
-              </NavItem>
+            <NavItem>
+              <NavLinks
+                to="/aprenda"
+                onClick={closeMobileMenu}
+              >
+                Aprenda
+              </NavLinks>
+            </NavItem>
 
-              
-              <NavItem>
-                <NavLinks
-                  to="/contato"
-                  onClick={closeMobileMenu}
-                >
-                  Contato
-                </NavLinks>
-              </NavItem>
+            <NavItem>
+              <NavLinks
+                to="/sobre"
+                onClick={closeMobileMenu}
+              >
+                Sobre
+              </NavLinks>
+            </NavItem>
 
-              <NavItem>
-                <NavLinks
-                  to="/sign-in"
-                  onClick={closeMobileMenu}
-                >
-                  <Button $primary>Login</Button>
-                </NavLinks>
-              </NavItem>
-              
-            </NavMenu>  
-          </NavbarContent>
-        </NavbarContainer>
+
+            <NavItem>
+              <NavLinks
+                to="/contato"
+                onClick={closeMobileMenu}
+              >
+                Contato
+              </NavLinks>
+            </NavItem>
+
+            <NavItem>
+              <NavLinks
+                to="/sign-in"
+                onClick={(userToken) ? closeMobileMenuAndSignout : closeMobileMenu}
+              >
+                <Button $primary>{texto}</Button>
+              </NavLinks>
+            </NavItem>
+
+            <NavItem>
+              <NavLinks style={{display: display}}>
+                {apelido}
+              </NavLinks>
+            </NavItem>
+
+          </NavMenu>
+        </NavbarContent>
+      </NavbarContainer>
     </>
   );
 }

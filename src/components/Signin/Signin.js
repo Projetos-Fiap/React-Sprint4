@@ -74,6 +74,7 @@ const Signin = () => {
     }
 
     navigate("/");
+    window.location.reload();
   };
 
   return (
