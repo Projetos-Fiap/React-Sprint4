@@ -6,23 +6,25 @@ const MapPageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 80%;
 
   iframe {
     width: 800px;
     height: 600px;
     border: none;
+    @media screen and (max-width: 960px) {
+    max-width: 80%;
+    max-height: 80%;
+    }
   }
-  
 `;
 
 const MapPageTitle = styled.h2`
-  font-size: 2.5rem;
   color: #263243;
   margin-bottom: 0.5em;
 `;
 
 const MapPageText = styled.p`
-  font-size: 1.5rem;
   margin-bottom: 1em;
 `;
 

@@ -5,14 +5,13 @@ import { Link } from "react-router-dom";
 import "./Slider.css";
 
 // Importando  e definindo Slides 
-import Slide1 from './images/HomeSlide1.jpg';
 import Slide2 from './images/HomeSlide2.jpg';
-import Slide3 from './images/HomeSlide3.jpg';
 import Slide4 from './images/HomeSlide4.jpg';
+import Slide3 from './images/HomeSlide3.jpg';
 
 export const sliderData = [
     {
-      image: Slide1,
+      image: Slide4,
       title: "Te ajudamos a cuidar de São Paulo",
       text: "Vamos ajudar a cidade reciclando nosso lixo? Aprenda mais com a gente",
       path: "/aprenda"
@@ -25,14 +24,8 @@ export const sliderData = [
     },
     {
       image: Slide3,
-      title: "Ganhe pontos",
-      text: "Sabia que você pode trocar seu lixo por benefícios?",
-      path: "/beneficios"
-    },
-    {
-      image: Slide4,
       title: "Sobre nós",
-      text: "Conheça mais sobre o projeto ReciclaSP",
+      text: "Conheça mais sobre o nosso projeto",
       path: "/sobre"
     },
 
@@ -45,7 +38,7 @@ const Slider = () => {
 
   const autoScroll = true;
   let slideInterval;
-  let intervalTime = 8000;
+  let intervalTime = 6000;
 
   const nextSlide = () => {
     setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);

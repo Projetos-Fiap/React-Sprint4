@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 const NavbarContainer = styled.nav`
   background: #263243;
-  height: 90px;
+  height: 85px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,8 +26,8 @@ const NavbarContent = styled.div`
   max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 30px;
+  padding-left: 30px;
 `
 const NavbarLogo = styled(Link)`
   color: #17cf97;
@@ -39,15 +39,12 @@ const NavbarLogo = styled(Link)`
   align-items: center;
 
   @media screen and (max-width: 960px) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
+    font-size: 1.5rem;
     }
 `;
 
 const NavbarIcon = styled(FaRecycle)`
-  margin-right: 0.5rem;
+  margin-right: 0.2rem;
   color: #17cf97;
 `;
 
@@ -88,7 +85,7 @@ const NavMenu = styled.ul`
     &.active {
     background: #263243;
     right: 0;
-    opacity: 0.8;
+    opacity: 0.9;
     transition: all 0.6s ease;
     z-index: 1;
     }
@@ -96,16 +93,16 @@ const NavMenu = styled.ul`
 `;
 
 const NavItem = styled.li`
-  height: 90px;
+  height: 85px;
   border-bottom: 2px solid transparent;
   &:hover {
-    border-bottom: 2px solid #17cf97;
+    border-bottom: 3px solid #17cf97;
   }
 
   @media screen and (max-width: 960px) {
     position: relative;
     &:hover {
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
     }
   }
 `;
@@ -139,7 +136,7 @@ function Navbar() {
 
             <NavbarLogo to="/" onClick={closeMobileMenu}>
               <NavbarIcon />
-              ReciclaSP
+              TheGreenProject
             </NavbarLogo>
 
             <MenuIcon onClick={handleClick}>
@@ -172,15 +169,6 @@ function Navbar() {
                   onClick={closeMobileMenu}
                 >
                   Aprenda
-                </NavLinks>
-              </NavItem>
-
-              <NavItem>
-                <NavLinks
-                  to="/beneficios"
-                  onClick={closeMobileMenu}
-                >
-                  Benefícios
                 </NavLinks>
               </NavItem>
 
