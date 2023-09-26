@@ -166,7 +166,7 @@ function Navbar() {
 
           <NavbarLogo to="/" onClick={closeMobileMenu}>
             <NavbarIcon />
-            TheGreenProject
+            Rota Sustentável
           </NavbarLogo>
 
           <MenuIcon onClick={handleClick}>
