@@ -1,4 +1,4 @@
-# Front End & JavaScript | Sprint 3 | Criando um site em React
+# Front End & JavaScript | Sprint 4 
 
 # Objetivo
 Desenvolver um projeto em React que contenha estrutura de componentes como por exemplo (Cabeçalho, Corpo e Footer) sendo que cada um deve ser um componente independente e utilizar a estrutura de pai para filho.
