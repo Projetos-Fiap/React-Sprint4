@@ -139,7 +139,7 @@ const WebsiteRights = styled.small`
   margin-bottom: 16px;
 `;
 
-const SocialIconLink = styled(Link)`
+const SocialIconLink = styled.a`
   color: #fff;
   font-size: 24px;
   margin-bottom: 10px;
@@ -214,7 +214,7 @@ function Footer() {
           </FooterLogo>
           <WebsiteRights>Rota Sustentável © 2023</WebsiteRights>
           <SocialIcons>
-            <SocialIconLink to='/' target='_blank' aria-label='Facebook'>
+            <SocialIconLink href='https://youtu.be/dQw4w9WgXcQ?si=bF3s-8G02p6dwOyl' target='_blank' aria-label='Facebook'>
               <FaFacebook />
             </SocialIconLink>
             <SocialIconLink to='/' target='_blank' aria-label='Instagram'>

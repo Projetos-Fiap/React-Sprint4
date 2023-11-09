@@ -10,6 +10,10 @@ import Footer from "./components/Footer/Footer";
 import HomePage from "./routes/HomePage";
 import MapPage from "./routes/MapPage";
 import AprendaPage from "./routes/AprendaPage";
+import Aprenda1 from "./routes/Aprenda1";
+import Aprenda2 from "./routes/Aprenda2";
+import Aprenda3 from "./routes/Aprenda3";
+import Aprenda4 from "./routes/Aprenda4";
 import SobrePage from "./routes/SobrePage";
 import ContactPage from "./routes/ContactPage";
 import ErrorPage from "./routes/ErrorPage"
@@ -31,6 +35,10 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/mapa" element={<MapPage />} />
         <Route path="/aprenda" element={<AprendaPage />} />
+        <Route path="/aprenda-1" element={<Aprenda1 />} />
+        <Route path="/aprenda-2" element={<Aprenda2 />} />
+        <Route path="/aprenda-3" element={<Aprenda3 />} />
+        <Route path="/aprenda-4" element={<Aprenda4 />} />
         <Route path="/sobre" element={<SobrePage />} />
         <Route path="/contato" element={<ContactPage />} />
         <Route path="/sign-in" element={<Signin />} />
