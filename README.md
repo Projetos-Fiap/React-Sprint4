@@ -9,7 +9,8 @@ Nosso projeto, ***"Rota Sustentável"***, tem como objetivo principal incentivar
 Além disso, pretendemos desenvolver uma máquina apelidada de ***"Green Machine"***, um tipo de reverse vending machine que irá ser instalada em locais públicos estratégicos. Nosso usuário poderá levar tipos selecionados de lixo reciclável (como vidro, alumínio, óleo e pilhas), inserir nessa máquina, e, através do seu cadastro, a máquina irá avaliar e depositar pontos para o usuário de acordo com a quantidade de material depositado. Esses pontos depois poderão ser trocados por benefícios, como crédito no Bilhete Único, desconto na conta de luz ou água, entre outros. 
 
 # Grupo  
-<li>André Lambert (RM99148) - 1ESPW</li>  
+<li>André Lambert (RM99148) - 1ESPW</li>
+<li>Lucas Feijó (RM99727) - 1ESPW</li>
 
 # Instruções
 Primeiramente, é necessário ter o [Node.js](https://nodejs.org/en) instalado em sua máquina.
