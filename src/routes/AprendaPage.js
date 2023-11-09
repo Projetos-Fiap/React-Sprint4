@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Card from 'react-bootstrap/Card';
 import { Button } from '../components/Button/Button'; 
-
+import { Link } from 'react-router-dom';
 import FotoCard1 from '../images/card1.png';
 import FotoCard2 from '../images/card2.jpg';
 import FotoCard3 from '../images/card3.jpg';
@@ -43,6 +43,10 @@ const CardContainer = styled.div`
   }
 `;
 
+const linkStyle = {
+  textDecoration: 'none',
+};
+
 function AprendaPage() {
   const imgStyle = {
     height: '250px', // Set the desired height for all images
@@ -63,7 +67,11 @@ function AprendaPage() {
                 Veja aqui como separar os resíduos comuns dos recicláveis.
               </Card.Text>
             </Card.Body>
-            <Button style={{ margin: '1rem auto', display: 'block', width: '12rem' }}>Saiba mais</Button>
+            <Link to="/aprenda-1" style={linkStyle}>
+              <Button style={{ margin: '1rem auto', display: 'block', width: '12rem' }}>
+                Saiba mais
+              </Button>
+            </Link>
           </Card>
 
           <Card style={{ width: '18rem', height: '30rem' }}>
@@ -74,7 +82,11 @@ function AprendaPage() {
                 Saiba quando o caminhão de coleta passa na sua rua.
               </Card.Text>
             </Card.Body>
-            <Button style={{ margin: '1rem auto', display: 'block', width: '12rem' }}>Saiba mais</Button>
+            <Link to="/aprenda-2" style={linkStyle}>
+              <Button style={{ margin: '1rem auto', display: 'block', width: '12rem' }}>
+                Saiba mais
+              </Button>
+            </Link>
           </Card>
 
           <Card style={{ width: '18rem', height: '30rem' }}>
@@ -85,7 +97,11 @@ function AprendaPage() {
                 Aprenda a organizar a coleta seletiva em seu condomínio.
               </Card.Text>
             </Card.Body>
-            <Button style={{ margin: '1rem auto', display: 'block', width: '12rem' }}>Saiba mais</Button>
+            <Link to="/aprenda-3" style={linkStyle}>
+              <Button style={{ margin: '1rem auto', display: 'block', width: '12rem' }}>
+                Saiba mais
+              </Button>
+            </Link>
           </Card>
 
           <Card style={{ width: '18rem', height: '30rem' }}>
@@ -96,7 +112,11 @@ function AprendaPage() {
                Aqui você encontra respostas para as principais dúvidas sobre reciclagem. 
               </Card.Text>
             </Card.Body>
-            <Button style={{ margin: '1rem auto', display: 'block', width: '12rem' }}>Saiba mais</Button>
+            <Link to="/aprenda-4" style={linkStyle}>
+              <Button style={{ margin: '1rem auto', display: 'block', width: '12rem' }}>
+                Saiba mais
+              </Button>
+            </Link>
           </Card>
         </CardContainer>  
       </AprendaPageContainer>
