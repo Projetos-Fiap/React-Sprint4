@@ -1,4 +1,7 @@
-# Front End & JavaScript | Sprint 4 
+# Front End & JavaScript | Sprint 4
+
+# Objetivo
+Desenvolver um projeto em React que contenha estrutura de componentes como por exemplo (Cabeçalho, Corpo e Footer) sendo que cada um deve ser um componente independente e utilizar a estrutura de pai para filho.
 
 # Resumo do projeto
 Nosso projeto, ***"Rota Sustentável"***, tem como objetivo principal incentivar a reciclagem de lixo dentro da cidade de São Paulo. Como produto principal temos um site que traz diversas informações sobre reciclagem, como um mapa interativo onde o usuário consegue ver qual o ponto mais próximo onde ele pode reciclar determinado tipo de lixo, além de tutoriais, artigos e reportagens que conscientizem o cidadão sobre os benefícios da reciclagem e incentive o mesmo a fortalecer essa prática. 
