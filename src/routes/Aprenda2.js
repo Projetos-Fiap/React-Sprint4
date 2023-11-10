@@ -1,10 +1,84 @@
-import React from 'react'
+import React from 'react';
+import "../styles-sass/Aprenda1.css";
+import Accordion from 'react-bootstrap/Accordion';
 
-const Aprenda2 = () => {
+const Aprenda1 = () => {
   return (
-    <div className="aprenda2">
+    <>
+      <div className="aprenda1">
+        <h1>Dias e horários de coleta</h1>
+      
+
+        <div className="accordionContainer">
+          <Accordion>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Bairro</Accordion.Header>
+              <Accordion.Body>
+                <ul>
+                  <li>Dia e horário aqui</li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>Bairro</Accordion.Header>
+              <Accordion.Body>
+                <ul>
+                  <li>Dia e horário aqui</li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="2">
+              <Accordion.Header>Bairro</Accordion.Header>
+              <Accordion.Body>
+                <ul>
+                  <li>Dia e horário aqui</li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="3">
+              <Accordion.Header>Bairro</Accordion.Header>
+              <Accordion.Body>
+                <ul>
+                  <li>Dia e horário aqui</li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="4">
+              <Accordion.Header>Bairro</Accordion.Header>
+              <Accordion.Body>
+                <ul>
+                  <li>Dia e horário aqui</li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="5">
+              <Accordion.Header>Bairro</Accordion.Header>
+              <Accordion.Body>
+                <ul>
+                  <li>Dia e horário aqui</li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="6">
+              <Accordion.Header>Bairro</Accordion.Header>
+              <Accordion.Body>
+                <ul>
+                  <li>Dia e horário aqui</li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+          </Accordion>
+      </div>
     </div>
-  )
+    </>
+  );
 }
 
-export default Aprenda2
+export default Aprenda1;
