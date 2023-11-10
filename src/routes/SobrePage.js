@@ -35,7 +35,7 @@ const SobrePageText = styled.p`
 `;
 
 const QuemSomosImage = styled.img`
-  max-width: 90%;
+  max-width: 40%;
   height: auto;
   border-radius: 5px; 
   margin-bottom: 50px;
