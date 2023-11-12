@@ -61,7 +61,7 @@ const Slider = () => {
       auto();
     }
     return () => clearInterval(slideInterval);
-  }, [currentSlide]);
+  }, [autoScroll, slideInterval, currentSlide,]);
 
   return (
     <div className="slider">
