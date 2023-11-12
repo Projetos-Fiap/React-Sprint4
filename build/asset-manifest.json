@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.58e4e7f7.css",
+    "main.js": "/static/js/main.c72a95e0.js",
+    "static/media/HomeSlide4.jpg": "/static/media/HomeSlide4.3e1bac3aa1edc17b21ca.jpg",
+    "static/media/HomeSlide3.jpg": "/static/media/HomeSlide3.f2c253bac92595474123.jpg",
+    "static/media/quemsomos2.jpg": "/static/media/quemsomos2.c595cde413260e6735ce.jpg",
+    "static/media/HomeSlide2.jpg": "/static/media/HomeSlide2.73767161d7bd9c9d94b4.jpg",
+    "static/media/card1.png": "/static/media/card1.cd6df22578498339122e.png",
+    "static/media/card2.jpg": "/static/media/card2.e8c5c5c6a8c11cec6ea3.jpg",
+    "static/media/card3.jpg": "/static/media/card3.c41415239a8d5348db5c.jpg",
+    "static/media/card4.jpg": "/static/media/card4.9ecd0e5edf5a234d25c7.jpg",
+    "index.html": "/index.html",
+    "main.58e4e7f7.css.map": "/static/css/main.58e4e7f7.css.map",
+    "main.c72a95e0.js.map": "/static/js/main.c72a95e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58e4e7f7.css",
+    "static/js/main.c72a95e0.js"
+  ]
+}
