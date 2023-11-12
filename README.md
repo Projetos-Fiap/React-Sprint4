@@ -13,7 +13,7 @@ Além disso, pretendemos desenvolver uma máquina apelidada de ***"Green Machine
 <li>André Lambert (RM99148) - 1ESPW</li>
 <li>Lucas Feijó (RM99727) - 1ESPW</li>
 <li>Bryan Willian (RM551305) - 1ESPW</li>
-<li>Vitor Maia (RM99658)</li>
+<li>Vitor Maia (RM99658) - 1ESPW</li>
 
 # Instruções
 Primeiramente, é necessário ter o [Node.js](https://nodejs.org/en) instalado em sua máquina.
