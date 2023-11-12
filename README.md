@@ -2,6 +2,7 @@
 
 # Objetivo
 Desenvolvemos um projeto em React que contém componetização de elementos (Navbar, Footer, Button), utilizamos de recursos do Bootstrap (Cards, Accordion), utilizamos roteamento com React-router-dom, fizemos formulário de Cadastro e Login com autenticação e armazenamento dos usuários, utilizamos styled-components e sass na estilização, fizemos um slideshow na homepage, entre outras ferramentas utilizadas.
+Deploy do projeto via Netlify: https://rotasustentavel.netlify.app
 
 # Resumo do projeto
 Nosso projeto, ***"Rota Sustentável"***, tem como objetivo principal incentivar a reciclagem de lixo dentro da cidade de São Paulo. Como produto principal temos um site que traz diversas informações sobre reciclagem, como um mapa interativo onde o usuário consegue ver qual o ponto mais próximo onde ele pode reciclar determinado tipo de lixo, além de tutoriais, artigos e reportagens que conscientizem o cidadão sobre os benefícios da reciclagem e incentive o mesmo a fortalecer essa prática. 
